@@ -1,3 +1,11 @@
+"""
+Django database models
+"""
 from django.db import models
 
-# Create your models here.
+
+class Human(models.Model):
+    """
+    Human data
+    """
+    pass

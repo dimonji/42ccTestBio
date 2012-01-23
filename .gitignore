@@ -4,3 +4,7 @@
 bin/
 include/
 lib/
+man/
+src/test_bio
+test_bio
+*#*
