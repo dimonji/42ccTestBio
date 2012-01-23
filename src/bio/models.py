@@ -8,4 +8,15 @@ class Human(models.Model):
     """
     Human data
     """
-    pass
+    name = models.CharField(max_length=30)
+    surname = models.CharField(max_length=30)
+    birthday = models.DateField(auto_now=False, auto_now_add=False)
+
+    def __unicode__(self):
+        return " ".join([self.name, self.surname])
+
+    class Meta(object):
+        verbose_name_plural = "Humans"
+
+
+
