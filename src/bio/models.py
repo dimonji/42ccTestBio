@@ -17,6 +17,3 @@ class Human(models.Model):
 
     class Meta(object):
         verbose_name_plural = "Humans"
-
-
-
