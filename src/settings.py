@@ -1,7 +1,12 @@
+import os.path
 # Django settings for src project.
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
+
+PROJECT_ROOT = os.path.dirname(__file__)
+
+FIXTURE_DIRS = (os.path.join(PROJECT_ROOT, 'fixtures'),)
 
 ADMINS = (
     # ('dimonji', 'dimonji@gmail.com'),
@@ -103,6 +108,7 @@ MIDDLEWARE_CLASSES = (
 ROOT_URLCONF = 'src.urls'
 
 TEMPLATE_DIRS = (
+    os.path.join(PROJECT_ROOT, 'templates'),
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
@@ -115,8 +121,9 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'bio',
     # Uncomment the next line to enable the admin:
-    # 'django.contrib.admin',
+    'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
 )
