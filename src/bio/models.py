@@ -11,6 +11,8 @@ class Human(models.Model):
     name = models.CharField(max_length=30)
     surname = models.CharField(max_length=30)
     birthday = models.DateField(auto_now=False, auto_now_add=False)
+    biography = models.TextField()
+
 
     def __unicode__(self):
         return " ".join([self.name, self.surname])

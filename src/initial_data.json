@@ -1,0 +1,12 @@
+[
+  {
+    "model": "bio.human",
+    "pk": 1,
+    "fields": {
+      "name": "Dmitry",
+      "surname": "Furzenko",
+      "birthday": "1984-09-21",
+      "biography": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    }
+  }
+]
