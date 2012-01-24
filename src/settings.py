@@ -1,7 +1,12 @@
+import os.path
 # Django settings for src project.
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
+
+PROJECT_ROOT = os.path.dirname(__file__)
+
+FIXTURE_DIRS = (os.path.join(PROJECT_ROOT, 'fixtures'),)
 
 ADMINS = (
     # ('dimonji', 'dimonji@gmail.com'),
@@ -117,7 +122,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'bio',
     # Uncomment the next line to enable the admin:
-    # 'django.contrib.admin',
+    'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
 )
