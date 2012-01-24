@@ -1,10 +1,10 @@
-from bio.models import Human
+from bio.models import Human, Contacts
 from django.shortcuts import render_to_response
 
 def show_human_bio(request):
     """
     Simple view for human bio
     """
-    human = Human.objects.filter(pk=1)
-    return render_to_response("human_bio.html", {'human': human})
+    human_bio = Contacts.objects.filter(human__id=1).get()
+    return render_to_response("human_bio.html", {'humans': [human_bio]})
 

@@ -1,1 +1,36 @@
-{{human}}
+{% extends "base.html" %}
+{% block title %}Human bio | {{ block.super }}{% endblock %}
+{% block header %}{{ block.super }} #1{% endblock %}
+{% block content %}
+  {% if humans %}
+    <style>
+      .left, .right {float: left; padding: 16px}
+    </style>
+    <div class="container">
+    {% for people in humans %}
+    <div class="left">
+      <h4>Info</h4>
+      <ul>
+        <li><u>Name</u>: {{people.human.name}}</li>
+        <li><u>Surname</u>: {{people.human.surname}}</li>
+        <li><u>Birthday</u>: {{people.human.birthday}}</li>
+        <li><u>Bio</u>: {{people.human.biography}}</li>
+      </ul>
+    </div>
+    <div class="right">
+      <h4>Contacts</h4>
+      <ul>
+        <li><u>Email</u>: {{people.email}}</li>
+        <li><u>Jabber</u>: {{people.jabber}}</li>
+        <li><u>Skype</u>: {{people.skype}}</li>
+        <li><u>Other</u>:
+          <ul>
+            <li>{{people.other}}</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    {% endfor %}
+  </div>
+  {% endif %}
+{% endblock %}

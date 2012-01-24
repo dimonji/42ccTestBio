@@ -8,3 +8,6 @@ class TestHumanBioView(HttpTestCase):
     def test_context_processor(self):
         self.go200("/")
         self.find("Dmitry")
+        self.find("Furzenko")
+        self.find("dimonji@gmail.com")
+        self.find("270318081")
