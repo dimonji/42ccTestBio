@@ -16,7 +16,6 @@ class Human(models.Model):
     def __unicode__(self):
         return " ".join([self.name, self.surname])
 
-
     class Meta(object):
         verbose_name_plural = "Humans"
 
@@ -34,9 +33,5 @@ class Contacts(models.Model):
     def __unicode__(self):
         return "EMail: %s" % self.email
 
-
     class Meta(object):
         verbose_name_plural = "Human Contacts"
-
-
-

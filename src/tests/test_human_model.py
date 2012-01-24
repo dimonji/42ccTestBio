@@ -11,6 +11,7 @@ BIRTHDAY = "1984-09-21"
 BIO = "To be or not to be..."
 NEW_NAME = "D"
 
+
 class TestModelHuman(DatabaseTestCase):
     """
     Human cread read delete test case
@@ -46,8 +47,3 @@ class TestModelHuman(DatabaseTestCase):
         test_human = self.assert_create(Human, name=NAME, surname=SURNAME,
                                         birthday=BIRTHDAY, biography=BIO)
         self.assert_delete(test_human)
-
-
-
-
-

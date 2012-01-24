@@ -14,6 +14,7 @@ SKYPE = "fdimonji"
 OTHER = "ICQ: 270318081"
 NEW_SKYPE = "Dimonji"
 
+
 class TestModelContacts(DatabaseTestCase):
     """
     Human cread read delete test case
@@ -59,8 +60,3 @@ class TestModelContacts(DatabaseTestCase):
                                           jabber=JABBER, skype=SKYPE,
                                           other=OTHER)
         self.assert_delete(test_contact)
-
-
-
-
-
