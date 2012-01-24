@@ -45,6 +45,7 @@ class TestModelHuman(DatabaseTestCase):
         """
         test_human = self.assert_create(Human, name=NAME, surname=SURNAME,
                                         birthday=BIRTHDAY, biography=BIO)
+        self.assert_delete(test_human)
 
 
 
