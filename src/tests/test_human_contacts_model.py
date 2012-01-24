@@ -6,7 +6,6 @@ from bio.models import Human
 from tddspry.django import DatabaseTestCase
 from test_human_model import NAME, SURNAME, BIO, BIRTHDAY
 
-import settings
 
 EMAIL = "dimonji@gmail.com"
 JABBER = "dimonji@jabber.org"

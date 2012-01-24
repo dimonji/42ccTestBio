@@ -4,7 +4,7 @@ Human models test case
 from bio.models import Human
 from tddspry.django import DatabaseTestCase
 
-import settings
+
 NAME = "Dmitry"
 SURNAME = "Furzenko"
 BIRTHDAY = "1984-09-21"
