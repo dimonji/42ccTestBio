@@ -20,15 +20,15 @@ class TestModelHuman(DatabaseTestCase):
         """
         Test database creation
         """
-        self.assert_create(Human, name=NAME, surname=SURNAME, birthday=BIRTHDAY,
-                           biography=BIO)
+        self.assert_create(Human, name=NAME, surname=SURNAME,
+                           birthday=BIRTHDAY, biography=BIO)
 
     def test_read(self):
         """
         Test read from database
         """
-        self.assert_create(Human, name=NAME, surname=SURNAME, birthday=BIRTHDAY,
-                           biography=BIO)
+        self.assert_create(Human, name=NAME, surname=SURNAME,
+                           birthday=BIRTHDAY, biography=BIO)
         self.assert_read(Human, name=NAME, surname=SURNAME, birthday=BIRTHDAY,
                          biography=BIO)
 
